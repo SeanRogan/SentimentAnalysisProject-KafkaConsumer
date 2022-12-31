@@ -24,7 +24,6 @@ public class KafkaConsumerConfig {
     @Autowired
     KafkaConsumerConfig(@Value("${spring.kafka.properties.bootstrap.servers}") String bootstrapServers) {
         this.bootstrapServers = bootstrapServers;
-        System.out.println(bootstrapServers + " set as bootstrap servers ");
     }
 
     @PostConstruct //postconstruct needed because the bootstrap servers variable isnt sure to be set
